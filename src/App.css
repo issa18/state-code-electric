@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
+.navbar {
+  background: #000000ea;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*top nav where the Call Us and Se Habla Espanol.*/
+.navbar-call-us {
+  background-color: rgba(8, 8, 8, 0.705);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Jumbotron CSS*/
+.jumbotron {
+  margin: 0;
+  background: linear-gradient( #0b486b 50%, #f56217);
+  color: #f56217; 
+  padding: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a, a:hover {
+  color: inherit;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* add padding to any rows and border */
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
 }
