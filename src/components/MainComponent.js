@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './HeaderComponent';
+import Home from './HomeComponent';
+import { JOBS } from '../shared/jobs';
+
 
 class Main extends Component {
     constructor(props) {
@@ -16,7 +19,7 @@ class Main extends Component {
             <div>
                 <Header />
                 <Switch>
-                    
+                    <Route exact path='/home' render={() => <Home />} />
                 </Switch>
             </div>
         );

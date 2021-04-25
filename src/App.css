@@ -7,6 +7,12 @@
   background-color: rgba(8, 8, 8, 0.705);
 }
 
+/*inner top nav where the Call Us and Se Habla esponol.*/
+.nav-call-us {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /*Jumbotron CSS*/
 .jumbotron {
   margin: 0;

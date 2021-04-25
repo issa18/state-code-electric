@@ -27,16 +27,14 @@ class Header extends Component {
             <>
                 <Navbar className="navbar-call-us" sticky="top">
                 <div className="container">
-                    <div className="row text-light">
-                        <div className="col">
-                            <h6>
-                            Call Us At:{' '} 
-                            <a href="tel:+11234567890">
-                                <i className="fa fa-phone fa-lg" /> 1-123-456-7890
-                            </a>{' '}
-                            Se habla Espanol!
-                            </h6>
-                        </div>
+                    <div className="row nav-call-us text-light">
+                        <h6>
+                        Call Us At:{' '} 
+                        <a href="tel:+11234567890">
+                            <i className="fa fa-phone fa-lg" /> 1-123-456-7890
+                        </a>{' '}
+                        Se habla Espanol!
+                        </h6>
                     </div>
                 </div>
                 </Navbar>    
@@ -63,28 +61,28 @@ class Header extends Component {
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
-                                <div className="px-5 text-nowrap">
+                                <div className="px-lg-5 px-md-3 text-nowrap">
                                     <NavItem>
                                         <NavLink className="nav-link" to="/home">
                                             <i class="fa fa-home fa-lg" /> Home
                                         </NavLink>
                                     </NavItem>
                                 </div>
-                                <div className="px-5 text-nowrap">
+                                <div className="px-lg-5 px-md-3 text-nowrap">
                                     <NavItem>
                                         <NavLink className="nav-link" to="/about">
                                             <i class="fa fa-info fa-lg"></i> About
                                         </NavLink>
                                     </NavItem>
                                 </div>
-                                <div className="px-5 text-nowrap">
+                                <div className="px-lg-5 px-md-3 text-nowrap">
                                     <NavItem>
                                         <NavLink className="nav-link" to="/gallery">
                                             <i class="fa fa-camera-retro fa-lg"></i> Our Work
                                         </NavLink>
                                     </NavItem>
                                 </div>
-                                <div className="px-5 text-nowrap">
+                                <div className="px-lg-5 px-md-3 text-nowrap">
                                     <NavItem>
                                         <NavLink className="nav-link" to="/contactus">
                                             <i class="fa fa-address-card fa-lg"></i> Contact
