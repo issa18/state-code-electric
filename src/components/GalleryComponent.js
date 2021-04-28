@@ -8,7 +8,7 @@ import { INDUSTRIAL } from '../shared/industrial';
 function RenderImages({image}) {
     return(
         
-        <div className="col">
+        <div>
             <img src={image.image} alt={image.type} width='325'/>
         </div>
         
@@ -48,7 +48,7 @@ class OurWork extends Component {
 
         const residentialImages = this.state.residential.map(image => {
             return(
-                <div key={image.id}>
+                <div key={image.id} className="col-md">
                     <RenderImages image={image} />
                 </div>
             );
@@ -56,7 +56,7 @@ class OurWork extends Component {
 
         const commercialImages = this.state.commercial.map(image => {
             return(
-                <div key={image.id}>
+                <div key={image.id} className="col-md">
                     <RenderImages image={image} />
                 </div>
             );
@@ -64,7 +64,7 @@ class OurWork extends Component {
 
         const industrialImages = this.state.industrial.map(image => {
             return(
-                <div key={image.id}>
+                <div key={image.id} className="col-md">
                     <RenderImages image={image} />
                 </div>
             );
@@ -76,13 +76,13 @@ class OurWork extends Component {
                     <h2>Services and Portfolio</h2>
                 </div>
                 <div className="row row-content">
-                    <h3 className="mr-md-5">
+                    <h3 className="col-md mr-md-1">
                         <br />Licensed and Insured<br />
-                        Reliable and Affordabel Services<br />
+                        Reliable and Affordable Services<br />
                         Free Estimates<br />
                         Call Us: (123)456-7890
                     </h3>
-                    <div className="ml-md-5">
+                    <div className="ml-md-1">
                         {electricianImage}
                     </div>
                 </div>
