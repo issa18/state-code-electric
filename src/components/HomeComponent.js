@@ -31,7 +31,7 @@ class Home extends Component {
 
         const homeGallery = this.state.jobs.map(job => {
             return(
-                <div key={job.id} className="col">
+                <div key={job.id} className="col-md row-top">
                     <RenderJobsItem job={job} />
                 </div>
             );

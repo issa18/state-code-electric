@@ -10,6 +10,7 @@
   padding-top: 25px;
 }
 
+/*Add color to the navbar*/
 .navbar {
   background: #000000ea;
 }
@@ -34,8 +35,14 @@
   padding: 4rem;
 }
 
+/*Makes the Blue on anchor href to be inherent, no longer making them blue*/
 a, a:hover {
   color: inherit;
+}
+
+/*change the color of the phone font icon orange*/
+.fa-phone {
+  color: #f56217;
 }
 
 /*This is for Our Work Page to center all the content inside it*/
