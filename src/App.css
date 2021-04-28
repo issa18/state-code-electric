@@ -1,6 +1,19 @@
+/* add padding to any rows (top and bottom) and a border line on the bottom of a row */
+.row-content {
+  padding: 20px 0 50px;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+/*adds padding to any row on the top*/
+.row-top {
+  padding-top: 25px;
+}
+
 .navbar {
   background: #000000ea;
 }
+
 
 /*top nav where the Call Us and Se Habla Espanol.*/
 .navbar-call-us {
@@ -25,9 +38,9 @@ a, a:hover {
   color: inherit;
 }
 
-/* add padding to any rows and border */
-.row-content {
-  padding: 50px 0;
-  border-bottom: 1px ridge;
-  min-height: 200px;
+/*This is for Our Work Page to center all the content inside it*/
+.gallery {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100rem;
 }
