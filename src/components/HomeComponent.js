@@ -3,8 +3,8 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap'
 import { JOBS } from '../shared/jobs';
 
 
-function RenderJobsItem({job}) {
-    return(
+function RenderJobsItem({ job }) {
+    return (
         <div>
             <Card>
                 <CardTitle className="text-center pt-3"><h3>{job.name}</h3></CardTitle>
@@ -30,14 +30,14 @@ class Home extends Component {
     render() {
 
         const homeGallery = this.state.jobs.map(job => {
-            return(
+            return (
                 <div key={job.id} className="col-md row-top">
                     <RenderJobsItem job={job} />
                 </div>
             );
         });
 
-        return(
+        return (
             <div className="container">
                 <div className="row row-content">
                     {homeGallery}

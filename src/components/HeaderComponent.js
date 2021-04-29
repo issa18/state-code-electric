@@ -6,11 +6,11 @@ class Header extends Component {
 
     constructor(props) {
         super(props);
-        
+
         this.state = {
             isNavOpen: false,
         };
-        
+
         this.toggleNav = this.toggleNav.bind(this);
 
     }
@@ -18,37 +18,37 @@ class Header extends Component {
     toggleNav() {
         this.setState({
             isNavOpen: !this.state.isNavOpen
-        }); 
+        });
     }
 
     render() {
-        return(
+        return (
 
             <>
                 <Navbar className="navbar-call-us" sticky="top">
-                <div className="container">
-                    <div className="row nav-call-us text-light">
-                        <h6>
-                        Call Us At:{' '} 
-                        <a href="tel:+11234567890">
-                            <i className="fa fa-phone fa-lg" /> 1-123-456-7890
+                    <div className="container">
+                        <div className="row nav-call-us text-light">
+                            <h6>
+                                Call Us At:{' '}
+                                <a href="tel:+11234567890">
+                                    <i className="fa fa-phone fa-lg" /> 1-123-456-7890
                         </a>{' '}
                         Se habla Espanol!
                         </h6>
+                        </div>
                     </div>
-                </div>
-                </Navbar>    
+                </Navbar>
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
-                            
+
                             <div className="col-12 col-md-6 order-lg-1 order-2">
                                 <h1>State Code Electric</h1>
                                 <h3>Don't Pull the Plug, Call Us!</h3>
-                                <Button className="mt-4 btn-lg text-nowrap"  outline color="light">Schedule a Visit</Button>
+                                <Button className="mt-4 btn-lg text-nowrap" outline color="light">Schedule a Visit</Button>
                             </div>
                             <div className="col order-md-2 order-1">
-                                <img className="img-fluid"src="/images/logo.png" />
+                                <img className="img-fluid" src="/images/logo.png" />
                             </div>
                         </div>
                     </div>

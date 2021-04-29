@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaCcVisa, FaCcMastercard, FaCcDiscover, FaCcPaypal} from "react-icons/fa";
+import { FaCcVisa, FaCcMastercard, FaCcDiscover, FaCcPaypal } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 function Footer(props) {
