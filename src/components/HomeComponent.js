@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap'
 import { JOBS } from '../shared/jobs';
+import { SERVICES } from '../shared/services';
 
 
 function RenderJobsItem({ job }) {
@@ -17,12 +18,22 @@ function RenderJobsItem({ job }) {
     );
 }
 
+function RenderServicesItem({service}) {
+    return (
+        <div>
+            <span><i className={service.icon} aria-hidden="true"></i></span><br/>
+            <p className="mt-2">{service.name}</p>
+        </div>
+    );
+}
+
 class Home extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            jobs: JOBS
+            jobs: JOBS,
+            services: SERVICES
         };
     }
 
@@ -33,6 +44,14 @@ class Home extends Component {
             return (
                 <div key={job.id} className="col-md row-top">
                     <RenderJobsItem job={job} />
+                </div>
+            );
+        });
+
+        const serviceIcon = this.state.services.map(service => {
+            return(
+                <div key={service.id} className="col-sm-6 col-md-3">
+                    <RenderServicesItem service={service} />
                 </div>
             );
         });
@@ -58,41 +77,9 @@ class Home extends Component {
                             <h1>Our Services</h1>
                         </div>
                     </div>
+
                     <div className="row text-center">
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-cogs fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">New Construction, Remodels & Repairs</p>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-wrench fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">Troubleshoot/ Repair</p>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-lightbulb-o fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">Lighting</p>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-plug fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">Electrical Outlet</p>
-                        </div>
-                    </div>
-                    <div className="row text-center">
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-microchip fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">Electric Panel/Breaker Box</p>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-home fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">Home Surge Protection</p>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-photo fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">Landscaping Lighting</p>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <span><i className="fa fa-certificate fa-5x" aria-hidden="true"></i></span><br/>
-                            <p className="mt-2">100% Licensed and Insured</p>
-                        </div>
+                        {serviceIcon}
                     </div>
                 </div>
             </>
