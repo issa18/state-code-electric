@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -9,15 +9,23 @@ class Header extends Component {
 
         this.state = {
             isNavOpen: false,
+            isModalOpen: false
         };
 
         this.toggleNav = this.toggleNav.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
 
     }
 
     toggleNav() {
         this.setState({
             isNavOpen: !this.state.isNavOpen
+        });
+    }
+
+    toggleModal() {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
         });
     }
 
@@ -45,7 +53,7 @@ class Header extends Component {
                             <div className="col-12 col-md-6 order-lg-1 order-2">
                                 <h1>State Code Electric</h1>
                                 <h3>Don't Pull the Plug, Call Us!</h3>
-                                <Button className="mt-4 btn-lg text-nowrap" outline color="light">Schedule a Visit</Button>
+                                <Button onClick={this.toggleModal} className="mt-4 btn-lg text-nowrap" outline color="light">Schedule a Visit</Button>
                             </div>
                             <div className="col order-md-2 order-1">
                                 <img className="img-fluid" src="/images/logo.png" />
@@ -53,6 +61,46 @@ class Header extends Component {
                         </div>
                     </div>
                 </Jumbotron>
+
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>
+                        Schedule a Visit
+                    </ModalHeader>
+                    <ModalBody>
+                        <Form>
+                            <FormGroup>
+                                <Label htmlFor="firstName">First Name</Label>
+                                <Input type="text" id="firstName" name="firstName" />
+                            </FormGroup> 
+                            <FormGroup>   
+                                <Label htmlFor="lastName">Last Name</Label>
+                                <Input type="text" id="lastName" name="lastName" />
+                            </FormGroup>
+                            <FormGroup>
+                            <Label htmlFor="phoneNum">Phone Number</Label>
+                            <Input type="text" id="phoneNum" name="phoneNum" />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="email">Email <small>(Optional)</small></Label>
+                                <Input type="text" id="email" name="email" />
+                            </FormGroup>
+                            <FormGroup tag="fieldset">
+                                Preferred Contact Method
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input type="radio" name="contactMethod" checked />{' '}Phone
+                                </Label>
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input type="radio" name="contactMethod" />{' '}Email
+                                </Label>
+                            </FormGroup>
+                        </Form>
+                    </ModalBody>
+                </Modal>
+
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
                         <div>
