@@ -63,7 +63,7 @@ class Header extends Component {
                 </Jumbotron>
 
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>
+                    <ModalHeader className="bg-primary text-light" toggle={this.toggleModal}>
                         Schedule a Visit
                     </ModalHeader>
                     <ModalBody className="container">
@@ -86,7 +86,7 @@ class Header extends Component {
                                 <Input className="form-control-lg shadow-sm" type="text" id="email" name="email" placeholder="Email (Optional)" />
                             </FormGroup>
                             <div className="col">
-                            <Button type="submit" value="submit" color="primary">Request Visit</Button>
+                            <Button type="submit" value="submit" color="primary" outline >Request Visit</Button>
                             </div>
                         </Form>
                     </ModalBody>
