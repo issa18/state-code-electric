@@ -66,39 +66,33 @@ class Header extends Component {
                     <ModalHeader toggle={this.toggleModal}>
                         Schedule a Visit
                     </ModalHeader>
-                    <ModalBody>
-                        <Form>
-                            <FormGroup>
-                                <Label htmlFor="firstName">First Name</Label>
-                                <Input type="text" id="firstName" name="firstName" />
+                    <ModalBody className="container">
+                        Input your information below and we will contact you within 1 business day to schedule a visit.
+                        <Form className="row mt-3">
+                            <FormGroup className="col-md-6">
+                                <Label className="col-form-label sr-only" htmlFor="firstName">First Name</Label>
+                                <Input className="form-control-lg shadow-sm" type="text" id="firstName" name="firstName" placeholder="First Name" />
                             </FormGroup> 
-                            <FormGroup>   
-                                <Label htmlFor="lastName">Last Name</Label>
-                                <Input type="text" id="lastName" name="lastName" />
+                            <FormGroup className="col-md-6">   
+                                <Label className="col-form-label sr-only" htmlFor="lastName">Last Name</Label>
+                                <Input className="form-control-lg shadow-sm" type="text" id="lastName" name="lastName" placeholder="Last Name" />
                             </FormGroup>
-                            <FormGroup>
-                            <Label htmlFor="phoneNum">Phone Number</Label>
-                            <Input type="text" id="phoneNum" name="phoneNum" />
+                            <FormGroup className="col-md-6">
+                            <Label className="col-form-control sr-only" htmlFor="phoneNum">Phone Number</Label>
+                            <Input className="form-control-lg shadow-sm" type="text" id="phoneNum" name="phoneNum" placeholder="Phone Number" />
                             </FormGroup>
-                            <FormGroup>
-                                <Label htmlFor="email">Email <small>(Optional)</small></Label>
-                                <Input type="text" id="email" name="email" />
+                            <FormGroup className="col-md-6">
+                                <Label className="col-form-control sr-only" htmlFor="email">Email <small>(Optional)</small></Label>
+                                <Input className="form-control-lg shadow-sm" type="text" id="email" name="email" placeholder="Email (Optional)" />
                             </FormGroup>
-                            <FormGroup tag="fieldset">
-                                Preferred Contact Method
-                            </FormGroup>
-                            <FormGroup check>
-                                <Label check>
-                                    <Input type="radio" name="contactMethod" checked />{' '}Phone
-                                </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                                <Label check>
-                                    <Input type="radio" name="contactMethod" />{' '}Email
-                                </Label>
-                            </FormGroup>
+                            <div className="col">
+                            <Button type="submit" value="submit" color="primary">Request Visit</Button>
+                            </div>
                         </Form>
                     </ModalBody>
+                    {/* <ModalFooter>
+
+                    </ModalFooter> */}
                 </Modal>
 
                 <Navbar dark sticky="top" expand="md">
