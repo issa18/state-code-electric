@@ -50,3 +50,8 @@ a, a:hover {
   margin-left: auto;
   width: 100rem;
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
