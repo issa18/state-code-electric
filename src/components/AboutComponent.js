@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Jobs, { JOBS } from '../shared/jobs'
+import { JOBS } from '../shared/jobs'
 import { Card, CardImg, CardText, CardBody, CardTitle, Button, Collapse } from 'reactstrap'
 
 function RenderServicesItem({ job }) {
@@ -63,25 +63,25 @@ class About extends Component {
                 </div>
                 <div className="container bg-light row-top">
                     <h2>Services</h2>
-                    <div className="row row-content buttons">
-                        <div>
-                            <Button onClick={this.toggleResidential} className="btn-lg text-nowrap" outline color="primary">Learn More</Button>
+                    <div className="container">
+                        <div onClick={this.toggleResidential} className="row serviceItems">
+                            <h3>Residential</h3>
                             <Collapse isOpen={this.state.isResidentialOpen} toggle={this.toggleCard}>
                                 <div>
                                     <RenderServicesItem job={this.state.jobs.filter(job => job.description)[0]}/>
                                 </div>
                             </Collapse>
                         </div>
-                        <div>
-                            <Button onClick={this.toggleCommercial} className="btn-lg text-nowrap" outline color="primary">Learn More</Button>
+                        <div onClick={this.toggleCommercial} className="row serviceItems">
+                            <h3>Commercial</h3>
                             <Collapse isOpen={this.state.isCommercialOpen} toggle={this.toggleCommercial}>
                                 <div>
                                     <RenderServicesItem job={this.state.jobs.filter(job => job.description)[1]}/>
                                 </div>
                             </Collapse>
                         </div>
-                        <div>
-                            <Button onClick={this.toggleIndustrial} className="btn-lg text-nowrap" outline color="primary">Learn More</Button>
+                        <div onClick={this.toggleIndustrial} className="row serviceItems">
+                            <h3>Industrial</h3>
                             <Collapse isOpen={this.state.isIndustrialOpen} toggle={this.toggleIndustrial}>
                                 <div>
                                     <RenderServicesItem job={this.state.jobs.filter(job => job.description)[2]}/>
