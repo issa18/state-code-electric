@@ -61,27 +61,27 @@ class About extends Component {
                     <h2>Don't Pull the Plug, Call Us!</h2>
                     <p>Have one of our certified people do the job. We can identify potential electrical issues before it's too late to save you money and headaches. If you are looking for a professional electrical repair contractor to help you troubleshoot or conduct Safety Inspections on your Residential or Commercial project or remodel, then turn to State Code Electric by calling (123)456-7890 or schedule a visit today!</p>
                 </div>
-                <div className="container bg-light row-top">
-                    <h2>Services</h2>
+                <div className="bg-light mt-3 row-top serviceContainer">
+                    <h2 className='container text-center'>Learn More About Our Services</h2>
                     <div className="container">
-                        <div onClick={this.toggleResidential} className="row serviceItems">
-                            <h3>Residential</h3>
+                        <div onClick={this.toggleResidential} className="row bg-dark serviceItems1">
+                            <h3 className="text-light m-3">Residential</h3>
                             <Collapse isOpen={this.state.isResidentialOpen} toggle={this.toggleCard}>
                                 <div>
                                     <RenderServicesItem job={this.state.jobs.filter(job => job.description)[0]}/>
                                 </div>
                             </Collapse>
                         </div>
-                        <div onClick={this.toggleCommercial} className="row serviceItems">
-                            <h3>Commercial</h3>
+                        <div onClick={this.toggleCommercial} className="row bg-dark serviceItems2">
+                            <h3 className="text-light m-3">Commercial</h3>
                             <Collapse isOpen={this.state.isCommercialOpen} toggle={this.toggleCommercial}>
                                 <div>
                                     <RenderServicesItem job={this.state.jobs.filter(job => job.description)[1]}/>
                                 </div>
                             </Collapse>
                         </div>
-                        <div onClick={this.toggleIndustrial} className="row serviceItems">
-                            <h3>Industrial</h3>
+                        <div onClick={this.toggleIndustrial} className="row bg-dark serviceItems3">
+                            <h3 className="text-light m-3">Industrial</h3>
                             <Collapse isOpen={this.state.isIndustrialOpen} toggle={this.toggleIndustrial}>
                                 <div>
                                     <RenderServicesItem job={this.state.jobs.filter(job => job.description)[2]}/>

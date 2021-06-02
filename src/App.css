@@ -56,6 +56,20 @@ a, a:hover {
   justify-content: space-between;
 }
 
-.serviceItems {
-  background: gray;
+/*About page CSS code below*/
+/*CSS for Acordian container*/
+.serviceContainer {
+  border-radius: 7px;
+  border: 1px solid black;
+}
+
+/*CSS for Acordian. Residential, Commercial and Industrial tabs*/
+.serviceItems1, .serviceItems2 {
+  border: .5px solid black;
+}
+
+.serviceItems3 {
+  border-end-start-radius: 7px;
+  border-end-end-radius: 7px;
+  border: .5px solid black;
 }
