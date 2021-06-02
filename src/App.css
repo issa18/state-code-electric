@@ -51,11 +51,6 @@ a, a:hover {
   width: 100rem;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
 /*About page CSS code below*/
 /*CSS for Acordian container*/
 .serviceContainer {

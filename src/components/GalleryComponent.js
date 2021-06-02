@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Media } from 'reactstrap';
 import { GALLERY } from '../shared/gallery';
 import { RESIDENTIAL } from '../shared/residential';
 import { COMMERCIAL } from '../shared/commercial';

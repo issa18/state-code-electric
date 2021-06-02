@@ -33,19 +33,6 @@ class Header extends Component {
         return (
 
             <>
-                <Navbar className="navbar-call-us" sticky="top">
-                    <div className="container">
-                        <div className="row nav-call-us text-light">
-                            <h6>
-                                Call Us At:{' '}
-                                <a href="tel:+11234567890">
-                                    <i className="fa fa-phone fa-lg" /> 1-123-456-7890
-                        </a>{' '}
-                        Se habla Espanol!
-                        </h6>
-                        </div>
-                    </div>
-                </Navbar>
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
@@ -133,6 +120,19 @@ class Header extends Component {
                                 </div>
                             </Nav>
                         </Collapse>
+                    </div>
+                </Navbar>
+                <Navbar className="navbar-call-us fixed-bottom">
+                    <div className="container">
+                        <div className="row nav-call-us text-light">
+                            <h6>
+                                Call Us At:{' '}
+                                <a href="tel:+11234567890">
+                                    <i className="fa fa-phone fa-lg" /> 1-123-456-7890
+                        </a>{' '}
+                        Se habla Espanol!
+                        </h6>
+                        </div>
                     </div>
                 </Navbar>
             </>
