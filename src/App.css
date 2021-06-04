@@ -1,3 +1,7 @@
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+}
+
 /* add padding to any rows (top and bottom) and a border line on the bottom of a row */
 .row-content {
   padding: 20px 0 50px;
